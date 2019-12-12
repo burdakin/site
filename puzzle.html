@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Никому не нужный сайт им. Сережи</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript">
+		
+		var score = 0;
+
+		function checkanswers(ans,ansArr)
+		{	var ans = document.getElementById(ans).value;
+			ans = ans.toLowerCase();
+			for(i=0; i<=ansArr.length; i++){
+				if (ans == ansArr[i])
+				{alert('вы угадали');
+				score++;
+				alert('вы угадали ' + score + ' ответ')}
+			} 
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="header">
+	<a href="index.html">Главная</a>
+	<span>/</span>
+	<a href="#">Игры</a>
+	<span>/</span>
+	<a href="#">Что-то еще</a>
+</div>
+
+<h1>Игра в загадки</h1>
+
+<div class="puzzlebox">
+	
+	<p>Решаем загадку со счетчиком правильных ответов.</p>
+	<br>
+	<p>Вот вопросы</p>
+	<br>
+	<p>Зимой и летом одним цветом</p>
+	<input type="text" id='userAnswer1'>
+	<br>
+	<button onclick="checkanswers('userAnswer1',['кровь','снег'])";>Ответить!</button>
+	<br>
+	<p>Какой конь не есть овса?</p>
+	<input type="text" id='userAnswer2'>
+	<br>
+	<button onclick="checkanswers('userAnswer2',['мертвый','шахматный'])";> Ответить!</button>
+
+
+
+
+
+</div>
+
+<div class="footer">
+Copyright &copy; Coca-Cola. </div>
+</body>
+</html>
